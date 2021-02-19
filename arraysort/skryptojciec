@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# Bash scripts for sorting array with number and letters
+# Sorting by numeric order, doubles go to another array
+# Letters are sorted by A-Z order
+
+
+array=(7 "d" 3 8 "y" 4 6 9 "g" "y" 3 0); # Array with numbers and letters
+
+	echo "Array before sort: ${array[@]}" 
+	array_without_d=($(echo "${array[@]}" | tr ' ' '\n'|  sort | uniq -u | tr '\n' ' ' ))
+	array_d=($(echo "${array[@]}" | tr ' ' '\n'| sort | uniq -d | tr '\n' ' '))
+	echo "Sorted without doubles: ${array_without_d[@]}"
+	echo "Sorted doubles: ${array_d[@]}"
