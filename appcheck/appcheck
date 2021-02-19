@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# Bash script for checking exist of the file on your bin catalog
+# If App not exist on server, script will try install it
+
+if [ -d $1 ] && [ -e "$1$2" ];then
+		echo 'There is a app on your bin catalog!'
+	else
+		echo 'There is no app on your bin catalog, installation will start'
+	        sudo apt-get install $2
+fi
+
