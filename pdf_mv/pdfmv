@@ -1,0 +1,11 @@
+#! /bin/bash
+
+
+# Move all pdf files from Downloads to Documents
+
+for pdf in /home/$USER/Downloads/*.pdf; do
+	doc_cat=/home/$USER/Documents
+	mv "${pdf}" ${doc_cat} && echo "Your file "${pdf}" was succesful moved ${dog_cat}"
+	
+done
+
