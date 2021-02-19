@@ -1,9 +1,10 @@
 
-
-
-How use the script just write on your terminal:
+Hi,
+If u want was check that's app installed on your server, or install even faster use this.
 
 sudo appcheck $1_yourbin_katalog $2_app_name_tocheck
 
-That's all
+example:
+
+sudo appcheck /usr/sbin/ nginx
 
